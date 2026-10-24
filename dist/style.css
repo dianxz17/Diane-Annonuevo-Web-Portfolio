@@ -86,3 +86,85 @@ body{font-size:17px}.lead{font-size:17px}.small-note{font-size:13px}.text-link,.
 @media(min-width:761px){nav a{display:inline-flex;align-items:center;min-height:44px}}
 @media(max-width:1000px){.capability-grid{grid-template-columns:1fr 1fr}.capability-grid>article:last-child{grid-column:1/-1}.resume-card{grid-template-columns:1fr;gap:22px}.profile-page .timeline article{grid-template-columns:125px minmax(0,1fr);gap:20px}}
 @media(max-width:760px){.profile-page .page-title{padding-bottom:25px}.profile-page .section{padding:32px 0}.software-grid,.capability-grid,.creative-extras{grid-template-columns:1fr}.capability-grid>article:last-child{grid-column:auto}.profile-page .timeline article{grid-template-columns:1fr;gap:10px;padding-bottom:29px}.profile-page .timeline{padding-left:22px}.profile-page .timeline article:before{left:-27px}.timeline-content h3{font-size:21px}.academic-timeline .academic-featured .timeline-content{padding:20px}.resume-card{padding:24px;margin-bottom:38px}.resume-card .actions{align-items:stretch;flex-direction:column}.resume-card .button{width:100%}.profile-page .skill-box{padding:24px}.creative-extras{gap:20px}.theme{min-width:44px;min-height:44px}}
+
+/* Academic projects reuse the portfolio's typography and light/dark tokens. */
+.projects-page .page-title{max-width:850px}
+.projects-page .lead{max-width:690px}
+.project-browser{padding-bottom:70px}
+.project-search{max-width:760px}
+.project-search label{font-weight:600;font-size:13px}
+.search-row{display:flex;gap:12px;align-items:stretch}
+.search-row input{min-width:0;font-size:15px}
+.search-row .button{white-space:nowrap;min-height:46px}
+.project-search .small-note{margin:8px 0 24px}
+.period-filters{display:flex;flex-wrap:wrap;gap:9px;padding:0 0 18px;border-bottom:1px solid var(--line)}
+.period-filters button{min-height:44px;border:1px solid var(--line);border-radius:30px;background:var(--card);color:var(--muted);padding:9px 20px;font-size:14px}
+.period-filters button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.period-filters button:hover{border-color:var(--accent)}
+#result-count{margin:18px 0 24px;font-size:13px}
+.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-card{min-width:0}
+.project-card-link{display:flex;flex-direction:column;height:100%;color:var(--text)}
+.project-card-link:hover{color:var(--text)}
+.project-cover{aspect-ratio:4/3;background:#f5f3f8;display:grid;place-items:center;overflow:hidden}
+.project-cover img{display:block;width:100%;height:100%;object-fit:contain}
+.project-card .card-body{display:flex;flex-direction:column;flex:1}
+.project-card .meta{font-size:11px}
+.project-card .project-category{font-size:12px;color:var(--accent);margin:12px 0 0}
+.project-card h3{font-size:21px;line-height:1.4;margin:9px 0 13px;overflow-wrap:anywhere}
+.project-card .project-description{margin:0 0 18px;line-height:1.75}
+.project-card .tags:empty{display:none}
+.project-card .tag{font-size:11px}
+.project-card .small-note{margin:16px 0 20px;font-size:12px}
+.project-action{margin-top:auto;display:flex;justify-content:space-between;align-items:center;min-height:28px}
+.project-card:focus-within{outline:2px solid var(--accent);outline-offset:4px}
+.projects-empty{grid-column:1/-1;text-align:center;padding:54px 25px;background:var(--tint)}
+.projects-empty h2{font-size:27px;margin:12px 0}
+.projects-empty p{margin:0 auto 22px;max-width:580px;font-size:15px}
+.project-detail .page-title{max-width:960px}
+.project-detail .page-title h1{font-size:clamp(36px,5vw,57px);letter-spacing:-1.8px;overflow-wrap:anywhere}
+.project-detail .lead{max-width:770px}
+.project-overview{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:45px;align-items:start;padding:40px 0}
+.project-overview p{font-size:16px;line-height:1.85}
+.project-overview h2{font-size:29px}
+.project-overview h3{font-size:19px}
+.project-facts{margin:0;gap:22px;min-width:0}
+.project-facts dd{font-size:14px;overflow-wrap:anywhere}
+.project-facts dt{font-size:11px}
+.project-gallery-section{padding:40px 0}
+.artwork-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.artwork{margin:0;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:11px;background:var(--card);align-self:start}
+.artwork:only-child{grid-column:1/-1}
+.artwork-open{display:block;position:relative;width:100%;border:0;padding:16px;background:#f5f3f8;color:#242842;cursor:zoom-in}
+.artwork-open img{display:block;width:100%;height:340px;object-fit:contain}
+.artwork:only-child img{height:auto;max-height:640px}
+.enlarge-hint{display:block;font-size:12px;text-align:right;padding-top:8px}
+.artwork figcaption{padding:18px 22px}
+.artwork figcaption h3{font-size:18px;margin:0 0 8px}
+.artwork figcaption p{font-size:14px;line-height:1.75;margin:0}
+.project-sources{border-top:1px solid var(--line);padding-top:30px}
+.project-sources h2{font-size:25px}
+.project-back-bottom{padding:10px 0 55px}
+.lightbox-open{overflow:hidden}
+.artwork-lightbox{width:min(1200px,95vw);max-width:95vw;max-height:94dvh;padding:20px;border:1px solid var(--line);border-radius:13px;background:var(--bg);color:var(--text);overflow:auto}
+.artwork-lightbox::backdrop{background:#030712df}
+.lightbox-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:14px}
+.lightbox-toolbar p{margin:0}
+.artwork-lightbox button{min-height:44px;min-width:44px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:7px;padding:8px 14px}
+.lightbox-stage{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:12px;align-items:center}
+.lightbox-stage img{width:100%;height:60dvh;object-fit:contain;min-width:0;background:#f5f3f8}
+.lightbox-stage button[hidden]{display:none}
+.lightbox-stage:has(button[hidden]){grid-template-columns:minmax(0,1fr)}
+.lightbox-caption h2{font-size:23px;letter-spacing:-.5px;margin:18px 0 6px}
+.lightbox-caption p{font-size:14px;margin:5px 0}
+.project-detail button:focus-visible,.projects-page button:focus-visible,.project-detail a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(min-width:701px) and (max-width:1000px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.project-overview{grid-template-columns:1fr;gap:24px;padding:30px 0}.artwork-grid{gap:20px}.artwork-open img{height:260px}.project-gallery-section .section-head{flex-wrap:wrap}.artwork-lightbox{padding:13px}.lightbox-stage{gap:7px}.lightbox-stage img{height:52dvh}.lightbox-caption h2{font-size:20px}}
+@media(max-width:700px){.project-grid,.artwork-grid{grid-template-columns:1fr}.project-cover{aspect-ratio:4/3}.project-browser{padding-bottom:45px}.period-filters{gap:8px}.period-filters button{padding:8px 15px}.project-card h3{font-size:22px}.project-card .card-body{padding:23px}.artwork-open img{height:auto;max-height:450px}}
+@media(max-width:420px){.search-row{flex-wrap:wrap}.search-row input{flex-basis:100%}.search-row .button{padding:9px 14px}.period-filters button{font-size:13px;padding:8px 12px}.project-facts{grid-template-columns:1fr 1fr;padding:20px;gap:18px}.project-facts dd{font-size:13px}.lightbox-stage{grid-template-columns:36px minmax(0,1fr) 36px;gap:4px}.lightbox-stage button{min-width:36px;padding:5px}.projects-empty h2{font-size:24px}}
+
+
+/* Keep portrait covers fully visible inside a fixed card frame. */
+.project-cover{position:relative;display:block}
+.project-cover img{position:absolute;inset:0}
+html[data-theme=dark] .project-card .meta,html[data-theme=dark] .project-card .project-category,html[data-theme=dark] .project-card .project-action{color:#a5a7ff}
