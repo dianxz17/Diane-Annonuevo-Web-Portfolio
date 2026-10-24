@@ -8,9 +8,10 @@
   "name": "diane-academic-portfolio",
   "private": true,
   "scripts": {
-    "check": "node --check dist/app.js && node --check dist/projects.js && node checks/projects.cjs && node checks/pages.cjs && node check-about.cjs",
+    "check": "node --check dist/app.js && node --check dist/projects.js && node --check dist/contact.js && node checks/projects.cjs && node checks/pages.cjs && node check-about.cjs",
     "test:browser": "node checks/projects-browser.cjs",
     "prepare:artwork": "node tools/prepare-artwork.mjs && node tools/optimize-artwork.mjs",
-    "routes": "node tools/project-routes.cjs"
+    "routes": "node tools/project-routes.cjs",
+    "test:contact": "node checks/contact-browser.cjs"
   }
 }

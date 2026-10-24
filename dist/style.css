@@ -168,3 +168,26 @@ body{font-size:17px}.lead{font-size:17px}.small-note{font-size:13px}.text-link,.
 .project-cover{position:relative;display:block}
 .project-cover img{position:absolute;inset:0}
 html[data-theme=dark] .project-card .meta,html[data-theme=dark] .project-card .project-category,html[data-theme=dark] .project-card .project-action{color:#a5a7ff}
+
+/* Contact keeps the shared palette and responsive layout. */
+.contact-page .page-title{max-width:850px}
+.contact-layout{align-items:start}
+.contact-links{margin:32px 0}
+.contact-links>div{margin:0 0 24px}
+.contact-links dt{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:650;color:var(--accent)}
+.contact-links dd{margin:5px 0 0;overflow-wrap:anywhere;font-size:16px}
+.contact-links dd a:hover{text-decoration:underline;text-underline-offset:4px}
+.contact-fields{gap:18px}
+.contact-page input,.contact-page textarea{font-size:15px}
+.contact-page textarea{min-height:170px}
+.contact-page .button{min-height:46px}
+#form-status:empty{display:none}
+#form-status{font-size:14px;margin:16px 0 0}
+#form-status[data-state=success]{color:#167447}
+#form-status[data-state=error]{color:#b42336}
+html[data-theme=dark] #form-status[data-state=success]{color:#7ce0b0}
+html[data-theme=dark] #form-status[data-state=error]{color:#ff9fae}
+html[data-theme=dark] .contact-links dt,html[data-theme=dark] .contact-page .text-link{color:#a5a7ff}
+#contact-privacy{font-size:12px;line-height:1.7;margin-bottom:0}
+.contact-page input:focus-visible,.contact-page textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:760px){.contact-layout{gap:24px}.contact-links{margin-bottom:4px}.contact-page form{padding:24px}.contact-fields{gap:0}}
