@@ -64,3 +64,12 @@ Old sample project URLs redirect to /projects. Only shared script/cache referenc
 The actual résumé is **dist/assets/annonuevo_resume.pdf**. /education contains its download/view section; /cv redirects to /education#resume. The contact page uses FormSubmit AJAX to deliver to annonuevodyn@gmail.com. This Gmail address is used throughout the site; the GitHub account is https://github.com/dianxz17. The owner must confirm the one-time FormSubmit activation email before delivery can be verified. No API keys or Gmail credentials belong in frontend files. Contact submission checks provider acknowledgement, handles timeout/failure without clearing the message, and includes a honeypot. Run npm run test:contact for browser tests with mocked provider responses. These tests do not prove inbox delivery.
 
 The design-preview banner is removed from all pages. Existing noindex/robots directives are preserved. Public access does not require search-engine indexing. Finals Figma design and low-fidelity wireframe are the only requested coursework assets still to be supplied.
+
+## GitHub Pages
+
+The repository is ready for publication as **dianxz17/dianxz17.github.io**. This account-site repository name serves the existing root-relative navigation and assets at the domain root.
+
+**.github/workflows/pages.yml** validates and publishes only **dist/** on pushes to main/master or a manual run. Select **GitHub Actions** under repository **Settings → Pages → Build and deployment → Source**. The workflow uses GitHub’s automatically supplied token; no personal access token belongs in the code.
+
+The GitHub repository and live Pages URL are not created by adding this workflow; authenticated GitHub access and a successful deployment are required. Development dependencies and output archives are excluded by .gitignore.
+
