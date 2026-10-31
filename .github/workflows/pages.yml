@@ -39,7 +39,11 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
+          # A unique name per attempt lets "Re-run jobs" deploy without a duplicate-artifact error.
+          name: github-pages-${{ github.run_attempt }}
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
 
