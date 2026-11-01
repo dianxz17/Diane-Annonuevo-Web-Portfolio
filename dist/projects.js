@@ -2,6 +2,7 @@
 /* CEEL 301 projects. Data lives in data.js; only verified tools belong in tools/technologies. */
 (() => {
  'use strict';
+ const site=window.SITE||{base:'',url:x=>x,html:x=>x};
  const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const periods=Object.freeze({prelim:'Prelim',midterm:'Midterm',finals:'Finals'});
  const normalize=s=>String(s??'').normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
@@ -28,7 +29,7 @@
    const found=filter(window.PORTFOLIO.projects,input.value,period);
    const scope=period==='all'?'all periods':periods[period];
    count.textContent=found.length+' project'+(found.length===1?'':'s')+' found · '+scope;
-   if(found.length)results.innerHTML=cards(found);
+   if(found.length)results.innerHTML=site.html(cards(found));
    else if(period==='finals'&&!window.PORTFOLIO.projects.some(p=>p.academicPeriod==='finals')){
     results.innerHTML='<div class="empty projects-empty"><span class="eyebrow">FINALS · NEXT CHAPTER</span><h2>Final projects are coming soon.</h2><p>My Figma design and low-fidelity wireframe will be added here once completed.</p></div>';
    }else{
@@ -54,7 +55,7 @@
   function show(index){
    current=(index+p.gallery.length)%p.gallery.length;
    const g=p.gallery[current];
-   img.src=g.fullSrc||g.src;img.alt=g.alt;
+   img.src=site.url(g.fullSrc||g.src);img.alt=g.alt;
    document.querySelector('#lightbox-title').textContent=g.title;
    document.querySelector('#lightbox-caption').textContent=g.caption;
    document.querySelector('#lightbox-position').textContent=(current+1)+' / '+p.gallery.length;

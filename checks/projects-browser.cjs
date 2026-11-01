@@ -26,23 +26,21 @@ const server=http.createServer((req,res)=>{
   await page.setViewportSize({width,height:1000});
   for(const theme of ['dark','light']){
    await page.evaluate(t=>{localStorage.setItem('portfolio-theme',t);document.documentElement.dataset.theme=t;},theme);
-   await page.goto(origin+'/projects');await count(4);
+   await page.goto(origin+'/projects');await count(5);
    assert.equal(await page.locator('select').count(),0);
-   for(const [q,n] of [['apple',1],['LOGO',2],['typography',2],['coke',1],['tech week',1],['banner',1],['prelim',2],['midterm',2],['2026',4],['Figma',0],['Photoshop',1],['Canva',1],['Activity 1',1],['Activity 4',1],['digital marketing campaign',1],['appl',1],['',4]]){
+   for(const [q,n] of [['apple',1],['LOGO',3],['typography',3],['coke',1],['tech week',1],['banner',1],['prelim',2],['midterm',2],['2026',5],['Figma',1],['wireframe',1],['no such work',0],['Photoshop',1],['Canva',1],['Activity 1',1],['Activity 4',1],['digital marketing campaign',1],['appl',1],['',5]]){
     await search(q,n);
-    if(!n){assert.equal(await page.locator('.projects-empty h2').textContent(),'No projects found.');await page.locator('#empty-clear-search').click();await count(4);}
+    if(!n){assert.equal(await page.locator('.projects-empty h2').textContent(),'No projects found.');await page.locator('#empty-clear-search').click();await count(5);}
    }
    await page.locator('[data-period=prelim]').click();await count(2);await search('logo',1);
    assert((await page.locator('.project-card').textContent()).includes('PUR-DYN'));
    await page.locator('#clear-search').click();await count(2);
    await page.locator('[data-period=midterm]').click();await count(2);await search('Canva',1);
    await page.locator('#clear-search').click();
-   await page.locator('[data-period=finals]').click();await count(0);
-   assert.equal(await page.locator('.projects-empty h2').textContent(),'Final projects are coming soon.');
-   assert((await page.locator('.projects-empty').textContent()).includes('My Figma design and low-fidelity wireframe'));
-   await search('Figma',0);assert((await page.locator('.projects-empty').textContent()).includes('coming soon'));
-   await page.locator('#clear-search').click();
-   await page.locator('[data-period=all]').click();await count(4);
+   await page.locator('[data-period=finals]').click();await count(1);await search('Figma',1);
+   await search('apple',0);assert.equal(await page.locator('.projects-empty h2').textContent(),'No projects found.');
+   await page.locator('#clear-search').click();await count(1);
+   await page.locator('[data-period=all]').click();await count(5);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Listing overflow '+width);
    const columns=await page.locator('.project-grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length);
    assert.equal(columns,width===1440?3:width===768?2:1);
@@ -91,15 +89,15 @@ const server=http.createServer((req,res)=>{
   const pdf=page.locator('a[href$=".pdf"]');
   if(await pdf.count()){const response=await page.request.get(origin+await pdf.getAttribute('href'));assert.equal(response.status(),200);assert((await response.body()).subarray(0,5).toString()==='%PDF-');}
   await page.screenshot({path:'outputs/'+p.slug+'.png',fullPage:true});
-  await page.locator('.project-back-bottom').click();await count(4);
+  await page.locator('.project-back-bottom').click();await count(5);
  }
  for(const route of ['/','/about','/skills','/experience','/education','/contact','/cv']){
   await page.goto(origin+route);await page.locator('h1').waitFor();
   assert.equal(await page.locator('h1').count(),1);assert(!await page.locator('main').evaluate(el=>/undefined|Illustrative concept/.test(el.textContent)));
  }
- for(const old of ['identity-study','interface-exploration','workspace-concept']){await page.goto(origin+'/projects/'+old);await page.waitForURL('**/projects');await count(4);}
+ for(const old of ['identity-study','interface-exploration','workspace-concept']){await page.goto(origin+'/projects/'+old);await page.waitForURL('**/projects');await count(5);}
  assert.deepEqual(errors,[],'Browser errors');assert.deepEqual(failed,[],'Failed requests');
- console.log('PASS: Chrome at 375/768/1440px; both themes; live search and all periods; counts; all 4 direct/refreshed routes; 19 image previews; lightbox buttons, arrows, Esc, focus trap/return; PDF; legacy redirects; unrelated pages. No JS errors or failed asset requests.');
+ console.log('PASS: Chrome at 375/768/1440px; both themes; live search and all periods; counts; all 5 direct/refreshed routes; 26 image previews; lightbox buttons, arrows, Esc, focus trap/return; PDF; legacy redirects; unrelated pages. No JS errors or failed asset requests.');
  }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});
 

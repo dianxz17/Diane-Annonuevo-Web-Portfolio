@@ -71,7 +71,7 @@ The design-preview banner is removed from all pages. Existing noindex/robots dir
 
 ## GitHub Pages
 
-The repository is ready for publication as **dianxz17/dianxz17.github.io**. This account-site repository name serves the existing root-relative navigation and assets at the domain root.
+The repository is published as **dianxz17/Annonuevo_Diane_Portfolio**, so the site lives at **https://dianxz17.github.io/Annonuevo_Diane_Portfolio/**. The site works in any folder: page shells load CSS, scripts and icons with relative paths, and **dist/site.js** detects the folder so routing, links and images get the right prefix. The same files also work at a domain root, for example with a local server on dist/. If the repository is renamed, update the og:image origin in **tools/project-routes.cjs** and run **npm run routes**.
 
 **.github/workflows/pages.yml** validates and publishes only **dist/** on pushes to main/master or a manual run. Select **GitHub Actions** under repository **Settings → Pages → Build and deployment → Source**. The workflow uses GitHub’s automatically supplied token; no personal access token belongs in the code.
 
