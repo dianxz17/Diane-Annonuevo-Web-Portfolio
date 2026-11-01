@@ -1,6 +1,7 @@
 window.PORTFOLIO = {
   "name": "Diane M. Annonuevo",
   "title": "IT Student / Graphic Designer",
+  "siteName": "Diane Annonuevo Portfolio",
   "tagline": "Thoughtful design. Purposeful technology.",
   "bio": "I'm Diane M. Annonuevo, a third year BSIT Student at City College of Calamba with hands on experience in web and graphic design. I bring visual design and technology together to create thoughtful digital experiences.",
   "location": "Calamba City, Laguna",
@@ -459,6 +460,131 @@ window.PORTFOLIO = {
         }
       ],
       "coverAlt": "Tech Week Digital Marketing Campaign — Social media post. The campaign graphic designed for a social media post."
+    },
+    {
+      "year": 2026,
+      "status": "Completed",
+      "tools": [
+        "Figma"
+      ],
+      "technologies": [],
+      "activityNumber": [
+        6
+      ],
+      "role": "Student Designer",
+      "id": "portfolio-website-design",
+      "slug": "portfolio-website-design",
+      "title": "Portfolio Website — Wireframe & Figma Prototype",
+      "academicPeriod": "finals",
+      "category": "UI/UX Design / Web Design",
+      "projectType": "Wireframe and high-fidelity prototype",
+      "description": "The design process behind this portfolio website: a hand-drawn low-fidelity wireframe developed into a high-fidelity, clickable Figma prototype with light and dark modes.",
+      "overview": "Activity 6 began with a low-fidelity wireframe, dated October 21, 2026, that maps the Home, About Me, Projects, Skills, and Contact pages and their navigation flow. The layout was then refined in Figma into high-fidelity light and dark mode frames for every page, linked together as an interactive prototype.",
+      "designFocus": "Plan a clear page structure and navigation first, then carry it into a consistent visual system with readable typography, a single accent color, and matching light and dark themes.",
+      "keywords": [
+        "portfolio",
+        "website",
+        "web design",
+        "ui",
+        "ux",
+        "wireframe",
+        "wireframing",
+        "low fidelity",
+        "lo-fi",
+        "high fidelity",
+        "hi-fi",
+        "prototype",
+        "figma",
+        "dark mode",
+        "light mode",
+        "navigation flow",
+        "finals"
+      ],
+      "coverImage": "/assets/ceel/portfolio-website-thumb.webp",
+      "gallery": [
+        {
+          "src": "/assets/ceel/portfolio-wireframe.webp",
+          "fullSrc": "/assets/ceel/portfolio-wireframe-upright.jpg",
+          "alt": "Portfolio Website Design — Activity 6 — Low-fidelity wireframe. Hand-drawn wireframes for the Home, About Me, Projects, Skills, and Contact pages, with annotations and the navigation flow.",
+          "title": "Activity 6 — Low-fidelity wireframe",
+          "caption": "Hand-drawn wireframes for the Home, About Me, Projects, Skills, and Contact pages, with annotations and the navigation flow.",
+          "width": 1800,
+          "height": 1301
+        },
+        {
+          "src": "/assets/ceel/portfolio-figma-flows.webp",
+          "fullSrc": "/assets/ceel/portfolio-figma-flows.png",
+          "alt": "Portfolio Website Design — High-fidelity prototype flows in Figma. Light and dark mode page frames connected into clickable prototype flows.",
+          "title": "High-fidelity prototype flows in Figma",
+          "caption": "Light and dark mode page frames connected into clickable prototype flows.",
+          "width": 1800,
+          "height": 853
+        },
+        {
+          "src": "/assets/ceel/portfolio-figma-frames.webp",
+          "fullSrc": "/assets/ceel/portfolio-figma-frames.png",
+          "alt": "Portfolio Website Design — High-fidelity frames in Figma. All eight page designs side by side in light mode and dark mode.",
+          "title": "High-fidelity frames in Figma",
+          "caption": "All eight page designs side by side in light mode and dark mode.",
+          "width": 1800,
+          "height": 857
+        },
+        {
+          "src": "/assets/ceel/portfolio-home-light.webp",
+          "fullSrc": "/assets/ceel/portfolio-home-light.png",
+          "alt": "Portfolio Website Design — Home page — light mode. The hero section with the introduction, call-to-action buttons, and portrait.",
+          "title": "Home page — light mode",
+          "caption": "The hero section with the introduction, call-to-action buttons, and portrait.",
+          "width": 1800,
+          "height": 886
+        },
+        {
+          "src": "/assets/ceel/portfolio-home-dark.webp",
+          "fullSrc": "/assets/ceel/portfolio-home-dark.png",
+          "alt": "Portfolio Website Design — Home page — dark mode. The same hero section in dark mode, with the logo and main navigation.",
+          "title": "Home page — dark mode",
+          "caption": "The same hero section in dark mode, with the logo and main navigation.",
+          "width": 1800,
+          "height": 877
+        },
+        {
+          "src": "/assets/ceel/portfolio-about.webp",
+          "fullSrc": "/assets/ceel/portfolio-about.png",
+          "alt": "Portfolio Website Design — About page — light mode. The About Me page with the personal introduction and an at-a-glance details card.",
+          "title": "About page — light mode",
+          "caption": "The About Me page with the personal introduction and an at-a-glance details card.",
+          "width": 1800,
+          "height": 877
+        },
+        {
+          "src": "/assets/ceel/portfolio-skills.webp",
+          "fullSrc": "/assets/ceel/portfolio-skills.png",
+          "alt": "Portfolio Website Design — Skills page — light mode. The Skills page presenting design and creative tools as cards.",
+          "title": "Skills page — light mode",
+          "caption": "The Skills page presenting design and creative tools as cards.",
+          "width": 1800,
+          "height": 893
+        }
+      ],
+      "externalLinks": [
+        {
+          "label": "Open the Figma design file",
+          "url": "https://www.figma.com/design/PNIFIol8pr1aTz9uCilXWs/Annonuevo_High-Fidelity-Prototype?node-id=0-1&t=UskkFQySxW2C1qMA-1"
+        },
+        {
+          "label": "Open the clickable Figma prototype",
+          "url": "https://www.figma.com/proto/PNIFIol8pr1aTz9uCilXWs/Annonuevo_High-Fidelity-Prototype?node-id=3-22598&p=f&t=ONroMHU9P9g8cOtc-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A22598"
+        },
+        {
+          "label": "High-fidelity prototype PDF on Google Drive",
+          "url": "https://drive.google.com/file/d/1dA4UCk-OxxwGU77fL74LO7rRbB2hjO5A/view"
+        },
+        {
+          "label": "All Finals files on Google Drive",
+          "url": "https://drive.google.com/drive/folders/1951QXkHLZCgAHwRaBcTd-hE9svuLOCf2"
+        }
+      ],
+      "coverAlt": "Portfolio Website Design — Home page in dark mode from the high-fidelity Figma prototype."
     }
   ],
   "skillGroups": [

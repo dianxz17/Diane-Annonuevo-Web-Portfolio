@@ -1,4 +1,4 @@
-﻿# Portfolio
+﻿# Diane Annonuevo Portfolio
 
 Existing buildless HTML, CSS, and JavaScript portfolio. Serve **dist/** as the web root. The existing navigation, footer, theme switch, typography, and unrelated page renderers are preserved.
 
@@ -57,13 +57,17 @@ No build step or runtime dependencies are required. Development-only artwork and
 
 Old sample project URLs redirect to /projects. Only shared script/cache references change in unrelated HTML shells.
 
+## Name and tab icon
+
+The site name is **Diane Annonuevo Portfolio** (siteName in **dist/data.js**, page titles and the header/footer brand). The browser-tab icon is the d. logo: **dist/favicon.svg**, with **favicon-32.png** and **apple-touch-icon.png** fallbacks.
+
 ## Hosting and existing features
 
 **.openai/hosting.json** retains the existing Sites project ID and static dist root. Keep its current public audience when deploying updates.
 
 The actual résumé is **dist/assets/annonuevo_resume.pdf**. /education contains its download/view section; /cv redirects to /education#resume. The contact page posts to the Formspree form **https://formspree.io/f/xkjjqzoe** (set as contactEndpoint in **dist/data.js**); Formspree delivers to the email address that owns that form. This Gmail address is used throughout the site; the GitHub account is https://github.com/dianxz17. The Formspree account email must be verified before delivery can be verified. No API keys or Gmail credentials belong in frontend files. Contact submission checks provider acknowledgement, handles timeout/failure without clearing the message, and includes a honeypot. Run npm run test:contact for browser tests with mocked provider responses. These tests do not prove inbox delivery.
 
-The design-preview banner is removed from all pages. Existing noindex/robots directives are preserved. Public access does not require search-engine indexing. Finals Figma design and low-fidelity wireframe are the only requested coursework assets still to be supplied.
+The design-preview banner is removed from all pages. Existing noindex/robots directives are preserved. Public access does not require search-engine indexing. The Finals project, Portfolio Website — Wireframe & Figma Prototype (Activity 6), uses the wireframe photo (rotated upright), Figma screenshots and page mockups from the shared Finals Drive folder, and links to the Figma file, prototype and PDF.
 
 ## GitHub Pages
 
