@@ -8,7 +8,7 @@ window.PORTFOLIO = {
   "phone": "0951-902-1515",
   "photo": "/assets/Diane.jpg",
   "cv": "/assets/annonuevo_resume.pdf",
-  "contactEndpoint": "https://formsubmit.co/ajax/annonuevodyn@gmail.com",
+  "contactEndpoint": "https://formspree.io/f/xkjjqzoe",
   "linkedin": "",
   "github": "https://github.com/dianxz17",
   "focus": "Web and Graphic Design",

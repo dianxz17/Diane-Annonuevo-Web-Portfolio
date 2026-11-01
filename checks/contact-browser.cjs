@@ -13,11 +13,11 @@ const server=http.createServer((req,res)=>{
  try{
  const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  let requests=[],mode='success';
- await page.route('https://formsubmit.co/ajax/**',async route=>{
+ await page.route('https://formspree.io/f/**',async route=>{
   requests.push(route.request().postDataJSON());
   if(mode==='network'){await route.abort('failed');return;}
   await new Promise(r=>setTimeout(r,120));
-  await route.fulfill({status:mode==='http'?503:200,contentType:'application/json',body:mode==='json'?'not json':JSON.stringify({success:mode==='rejected'?'false':'true',message:'test response'})});
+  await route.fulfill({status:mode==='http'?503:mode==='rejected'?422:200,contentType:'application/json',body:mode==='json'?'not json':JSON.stringify(mode==='rejected'?{errors:[{message:'test rejection'}]}:{ok:true,next:'https://formspree.io/thanks'})});
  });
  const fill=async()=>{
   await page.locator('#name').fill('Portfolio Test');
@@ -43,7 +43,7 @@ const server=http.createServer((req,res)=>{
    await page.waitForFunction(()=>document.querySelector('#form-status').dataset.state==='success');
    assert.equal(await page.locator('#message').inputValue(),'');
    assert(await page.locator('button[type=submit]').isEnabled());
-   const sent=requests[requests.length-1];assert.equal(sent._replyto,'visitor@example.com');assert.equal(sent._subject,'Portfolio message: A new design project');assert(!('_cc' in sent));assert.equal(sent._honey,'');
+   const sent=requests[requests.length-1];assert.equal(sent._replyto,'visitor@example.com');assert.equal(sent._subject,'Portfolio message: A new design project');assert(!('_cc' in sent));assert(!('_gotcha' in sent));
    await page.screenshot({path:'outputs/contact-'+width+'-'+theme+'.png',fullPage:true});
   }
  }
